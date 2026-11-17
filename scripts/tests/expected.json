@@ -1,0 +1,35 @@
+{
+ "cup_good": [],
+ "cup_undercut": [
+  "undercut"
+ ],
+ "cup_no_draft": [
+  "low_draft"
+ ],
+ "cup_no_pour_path": [
+  "no_pour_path"
+ ],
+ "cup_leak": [
+  "leak",
+  "low_draft"
+ ],
+ "cup_air_trap": [
+  "air_trap",
+  "low_draft"
+ ],
+ "cup_floods": [
+  "floods",
+  "undercut"
+ ],
+ "cup_interference": [
+  "interference"
+ ],
+ "cup_hygiene": [
+  "hygiene",
+  "leak",
+  "thin_wall"
+ ],
+ "cup_thin_wall": [
+  "thin_wall"
+ ]
+}

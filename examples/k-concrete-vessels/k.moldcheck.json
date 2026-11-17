@@ -1,0 +1,4 @@
+{"units":"mm","up":"z","wall":19.0,"min_draft":1.0,"density":2100,
+ "pour":[0,103,540],"fill_level":489,"rim":457.2,
+ "bed":[325,320,325],
+ "groups":{"core":"^K[A-D]\\d","shell":"^[A-D]\\d"}}

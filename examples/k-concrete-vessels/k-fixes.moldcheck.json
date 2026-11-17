@@ -1,0 +1,184 @@
+{
+ "units": "mm",
+ "up": "z",
+ "wall": 19.0,
+ "min_draft": 1.0,
+ "density": 2100,
+ "pour": [
+  0,
+  103,
+  540
+ ],
+ "fill_level": 489,
+ "rim": 457.2,
+ "remove": [
+  {
+   "name": "open the rim lid in D1-D4",
+   "type": "annulus",
+   "r": [
+    89.4,
+    115.5
+   ],
+   "z": [
+    457.2,
+    463.7
+   ]
+  }
+ ],
+ "add": [
+  {
+   "name": "close the 70 deg opening: extend the core out to the shell's flat wall",
+   "type": "box",
+   "center": [
+    65.8,
+    180.7,
+    -85
+   ],
+   "rot_z": 70,
+   "size": [
+    32.6,
+    560,
+    560
+   ],
+   "plug": "in",
+   "reach": 30
+  },
+  {
+   "name": "close the 290 deg opening: extend the core out to the shell's flat wall",
+   "type": "box",
+   "center": [
+    65.8,
+    -180.7,
+    -85
+   ],
+   "rot_z": 290,
+   "size": [
+    32.6,
+    560,
+    560
+   ],
+   "plug": "in",
+   "reach": 30
+  },
+  {
+   "name": "vent plug 1",
+   "type": "cylinder",
+   "center": [
+    -38.1,
+    -76.2
+   ],
+   "r": 4.5,
+   "z": [
+    -400.5,
+    -393.0
+   ]
+  },
+  {
+   "name": "vent plug 2",
+   "type": "cylinder",
+   "center": [
+    38.1,
+    -76.2
+   ],
+   "r": 4.5,
+   "z": [
+    -400.5,
+    -393.0
+   ]
+  },
+  {
+   "name": "vent plug 3",
+   "type": "cylinder",
+   "center": [
+    -101.6,
+    -38.1
+   ],
+   "r": 4.5,
+   "z": [
+    -400.5,
+    -393.0
+   ]
+  },
+  {
+   "name": "vent plug 4",
+   "type": "cylinder",
+   "center": [
+    101.6,
+    -38.1
+   ],
+   "r": 4.5,
+   "z": [
+    -400.5,
+    -393.0
+   ]
+  },
+  {
+   "name": "vent plug 5",
+   "type": "cylinder",
+   "center": [
+    -101.6,
+    38.1
+   ],
+   "r": 4.5,
+   "z": [
+    -400.5,
+    -393.0
+   ]
+  },
+  {
+   "name": "vent plug 6",
+   "type": "cylinder",
+   "center": [
+    101.6,
+    38.1
+   ],
+   "r": 4.5,
+   "z": [
+    -400.5,
+    -393.0
+   ]
+  },
+  {
+   "name": "vent plug 7",
+   "type": "cylinder",
+   "center": [
+    38.1,
+    76.2
+   ],
+   "r": 4.5,
+   "z": [
+    -400.5,
+    -393.0
+   ]
+  },
+  {
+   "name": "vent plug 8",
+   "type": "cylinder",
+   "center": [
+    -38.1,
+    76.2
+   ],
+   "r": 4.5,
+   "z": [
+    -400.5,
+    -393.0
+   ]
+  },
+  {
+   "name": "riser collar (new)",
+   "type": "annulus",
+   "r": [
+    115.5,
+    121.9
+   ],
+   "z": [
+    457.0,
+    494.0
+   ]
+  }
+ ],
+ "groups": {
+  "core": "^K[A-D]\\d",
+  "shell": "^[A-D]\\d"
+ }
+}
