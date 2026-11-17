@@ -144,6 +144,48 @@ def attach(seg, key, family, note):
         log[tgt] += f" {note} (+{(man[tgt].volume()-before)/1e3:.1f} cm3);"
 
 
+SEAM_MARGIN = 25  # degrees: each share starts from its sector grown by this much, then is cut by the seam planes
+
+
+def seam_plane(a, b, n, dmin=140.0, dmax=186.0):
+    """plane through the contact faces of core pieces a and b near the window (d along n in dmin..dmax)"""
+    pts, _ = trimesh.sample.sample_surface(parts_full[a], 250000, seed=2)
+    d = pts @ n
+    pts = pts[(d > dmin) & (d < dmax)]
+    pb = parts_full[b]
+    lo, hi = pb.bounds[0] - 1, pb.bounds[1] + 1
+    pts = pts[np.all((pts > lo) & (pts < hi), 1)]
+    sd = trimesh.proximity.signed_distance(pb, pts)
+    c = pts[np.abs(sd) < 0.3]
+    assert len(c) > 30, f"no contact between {a} and {b} near the window"
+    P0 = c.mean(0)
+    _, sv, vt = np.linalg.svd(c - P0)
+    N = vt[2]
+    return P0, N / np.linalg.norm(N), float(sv[2] / np.sqrt(len(c)))
+
+
+def side_point(k, n, P0, r=60.0):
+    """a point of piece k near the window and near P0, to tell which side of a seam plane k is on"""
+    pts, _ = trimesh.sample.sample_surface(parts_full[k], 60000, seed=3)
+    d = pts @ n
+    m = (d > 140) & (d < 186) & (np.linalg.norm(pts - P0, axis=1) < r)
+    if m.sum() < 10:
+        m = (d > 140) & (d < 186)
+    return pts[m].mean(0)
+
+
+def halfspace(P0, N):
+    """everything on the +N side of the plane through P0"""
+    N = N / np.linalg.norm(N)
+    u = np.cross(N, [0, 0, 1.0]) if abs(N[2]) < 0.9 else np.cross(N, [1.0, 0, 0])
+    u /= np.linalg.norm(u)
+    v = np.cross(N, u)
+    box = mf.Manifold.cube([4000, 4000, 4000]).translate([-2000, -2000, 0])
+    return box.transform(np.c_[u, v, N, P0].astype(np.float64))
+
+
+parts_full = parts  # the original (unfixed) pieces, by file name
+
 for A in (70, 290):
     r = np.load(os.path.join(HERE, f"rho{A}.npz"), allow_pickle=True)
     s = np.load(os.path.join(HERE, f"shell{A}.npz"))
@@ -162,10 +204,27 @@ for A in (70, 290):
     dd = np.r_[np.arange(186.0, D_END, 1.5), D_END]
     RO = np.array([ro_at(d) for d in dd])
     tube = ring_tube(n, t, z, dd, RO, RO - SKIN)
-    for owner, j0, j1 in runs_of(own[list(D).index(188.0)]):
-        seg = tube ^ sector(n, t, z, j0, j1)
+    # split the extension between the core pieces along their own seam planes, carried on out.
+    # (A split along rays in the window plane locks the pieces together: each piece's share is
+    # then a wedge that no pull can free. Found by moldanim's demold planner, 2026-11-17.)
+    runs = runs_of(own[list(D).index(188.0)])
+    names = [o[:-4] for o, _, _ in runs]
+    planes = {}
+    for i in range(len(runs)):
+        pa, pb = names[i], names[(i + 1) % len(runs)]
+        planes[frozenset((pa, pb))] = seam_plane(pa, pb, n)
+        P0, N, res = planes[frozenset((pa, pb))]
+        print(f"window {A}: seam {pa}|{pb} normal {np.round(N, 3).tolist()} through {np.round(P0).tolist()}, fit rms {res:.2f} mm")
+    for i, (owner, j0, j1) in enumerate(runs):
+        k = owner[:-4]
+        reg = sector(n, t, z, j0 - SEAM_MARGIN, j1 + SEAM_MARGIN)
+        for q in (names[i - 1], names[(i + 1) % len(runs)]):
+            P0, N, _ = planes[frozenset((k, q))]
+            side = np.sign((side_point(k, n, P0) - P0) @ N)
+            reg = reg ^ halfspace(P0, N * side)
+        seg = tube ^ reg
         if seg.volume() >= 1:
-            attach(seg, owner[:-4], "K", f"window {A} deg: core skin extended to the flat wall over {j0}..{j1} deg")
+            attach(seg, k, "K", f"window {A} deg: core skin extended to the flat wall over {j0}..{j1} deg, split on the seam planes")
 
     # ledge on the flat wall: frame hole radius and owner from a section through the wall
     segs = []

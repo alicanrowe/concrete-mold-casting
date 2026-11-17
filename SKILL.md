@@ -1,6 +1,6 @@
 ---
 name: concrete-mold-casting
-description: Use when designing, checking or producing a cast concrete or GFRC piece (planters, vessels, basins, panels, furniture) from a multi-part mold: printed or CNC molds, silicone or fiberglass mother molds, draft and parting lines, GFRC mix with integral pigment, reinforcement, pour, cure, demold and a small production run. Checks the mold model for pour path, leaks, flooding, air traps, undercuts, draft and core uplift.
+description: Use when designing, checking, animating or producing a cast concrete or GFRC piece (planters, vessels, basins, panels, furniture) from a multi-part mold: printed or CNC molds, silicone or fiberglass mother molds, draft and parting lines, GFRC mix with integral pigment, reinforcement, pour, cure, demold and a small production run. Checks the mold model for pour path, leaks, flooding, air traps, undercuts, draft and core uplift, and builds collision-checked assembly, pour and demold animations (GLB) from it.
 metadata:
   author: Alican Rowe (@alicanrowe)
 ---
@@ -19,6 +19,7 @@ Design a mold that fills, vents, holds and comes apart; mix and pour GFRC that c
 - Even wall: 3/4 in (19 mm) for poured premix at planter scale, 1/2 in minimum. Floor as thick as the wall or thicker.
 - Every concrete-facing face drafted away from its piece's pull: 1–2° on sealed smooth prints, more for texture. No undercuts, unless the face is a silicone glove that peels.
 - Cores come out through the opening: key pieces first, parallel-sided. Name the demold order on the project page.
+- Anything added to pieces that come apart (skins, ledges, ribs) is split between them on their seam planes, never along radial or other made-up lines, or the pieces lock. moldcheck can't see a lock between two pieces; `moldanim.py` can.
 - A funnel or riser above the rim; a vent at the top of every ceiling; no path from the cavity into the core's interior; nothing that lets the pour land on a lid.
 - Flanges on every seam, bolts every 4–6 in on the lower half, clay or caulk on the outside of each seam.
 - **Core hold-down** that bolts to the base or a bridge. The checker's `group_force_N` z for the core is the uplift; the hold-down must beat it with margin. Weight and friction caps don't count.
@@ -41,4 +42,15 @@ Design a mold that fills, vents, holds and comes apart; mix and pour GFRC that c
 - One test pour before buying for the run. Fix the mold in CAD and re-check before pour 2.
 - Keep a pour log (batch weights, water, pigment lot, temperature, demold time, defects) for every unit.
 
-After changing `scripts/moldcheck.py`, run `python3 scripts/tests/make_fixtures.py && python3 scripts/tests/run_tests.py`: every planted mistake must be caught and the good mold must stay clean.
+## Animations (how it goes together, the pour, how it comes apart)
+Make them from the checked mold, never by hand. Read `references/animation.md`.
+1. Write `<piece>.anim.json`: part roles and materials, the demold stages (hardware, cap and funnel, bands top down, base, core `plan` with keys first) and the build stages (core `reverse`, then the pour).
+2. `python3 scripts/moldanim.py MOLD_DIR --cast vessel.stl --spec <piece>.anim.json --out <piece>-mold.glb --report <piece>.anim-report.json`
+   - Core pieces get planned exit paths and an order that works.
+   - Every clip is checked every 2 mm of motion for pieces passing through each other or through the cast.
+   - It must exit 0, with 0 collisions in `build`, `pour` and `demold`.
+   - `no way out` means the mold can't be demolded in that order, or at all. Fix the mold.
+3. `node scripts/animpreview.js <piece>-mold.glb previews/ --mv model-viewer.min.js` renders an MP4 and a contact sheet per clip. Watch them before handing the GLB to the site. Compress with `npx @gltf-transform/cli meshopt`.
+4. Write the demold order from the report onto the project page.
+
+After changing `scripts/moldcheck.py`, run `python3 scripts/tests/make_fixtures.py && python3 scripts/tests/run_tests.py`: every planted mistake must be caught and the good mold must stay clean. After changing `scripts/moldanim.py`, run `python3 scripts/tests/run_anim_tests.py`.

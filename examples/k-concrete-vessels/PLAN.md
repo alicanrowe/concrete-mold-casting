@@ -19,7 +19,7 @@ Nine black GFRC planters, 35 in tall and 24 in wide, black all the way through, 
   - base plate, pour cap and funnel
 - Every piece has its pull in its name, for example `A3_..._pull_137_deg` or `CORE..._pull_up`.
 - 41 bolt joints (1/4-20 x 1 in) and 48 spring-clamp positions.
-- Assembly order: base, band A, core stacked and lowered in, bands B to D, then the cap and funnel.
+- Assembly order: base, the core assembled piece by piece on the base, bands A to D, then the cap and funnel. (The core can't be lowered into band A as a unit: its belly is wider than band A's top.)
 - Wall 19 mm, floor 19 mm. The pour goes into the funnel above the neck. The fill level is the top of the funnel throat (z 489 mm). The rim is at z 457 mm.
 
 ## What the checker found on the mold as drawn
@@ -136,11 +136,13 @@ Use one pigment lot for all nine pots, and pre-weigh every dose on a 0.1 g scale
 ## Fixes applied to the STLs (2026-11-17)
 The four fixes above are now in the mold files: `K_mold_print_files_STL_2026-11-17_fixes.zip`. It has 57 files, the 53 mold parts (32 changed) plus 4 hold-down parts. They were made by editing the 2026-10-26 STLs with `fixes/apply_fixes.py`. The Onshape model still needs the same changes.
 
+**Revision b** (`K_mold_print_files_STL_2026-11-17b_fixes.zip`) replaces that set. In the first set, the window skins were split between the core pieces along rays in the window plane. Every piece's share was a wedge about 3 mm deep that locked it to its neighbours, and 12 of the 22 core pieces could not come out. `moldanim.py` found this (see Animations below). moldcheck can't, because it checks pieces against the concrete, not against each other. Revision b splits the skins on the core's own seam planes (x = ±76 mm, z = −86 and −253 mm), fitted to 0.03 mm and carried straight on to the flat wall. 14 core pieces changed (KA1, KA2, KA5, KA6, KB1 to KB4, KC1 to KC6). The 2.0 mm re-check is the same as before: 18.5 L, and only the accepted flags.
+
 1. **Pour path:**
    - The ring over the wall gap is cut off D1 to D4.
    - Each D piece gets a 6.35 mm riser collar (r 115.5 to 121.85 mm, up to z 495) that carries the funnel.
 2. **Side openings:**
-   - The core skin continues to the flat wall on the 10 core pieces at each opening, following the vessel's inner surface. The surface is measured by `fixes/measure_core.py` and `fixes/measure_shell.py`. The skin doesn't just extrude straight out, because that would thin the wall at the opening edge by up to 12 mm.
+   - The core skin continues to the flat wall on the 7 core pieces at each opening, split between them on their seam planes (revision b), following the vessel's inner surface. The surface is measured by `fixes/measure_core.py` and `fixes/measure_shell.py`. The skin doesn't just extrude straight out, because that would thin the wall at the opening edge by up to 12 mm.
    - The 12 flat-wall shell pieces get an 8.5 mm ledge, so the skin seats on a land. Before, it only had a 1 mm edge to seat on.
 3. **Vents:** the eight core floor vents are plugged.
 4. **Hold-down:**
@@ -166,3 +168,29 @@ What's left is accepted:
 - The logo and feet relief shows as thin.
 - Low draft on the base pocket and on the core floor pieces.
 - The bed list.
+
+## Animations (moldanim, 2026-11-17)
+`anim/k.anim.json` is the spec and `anim/k.anim-report.json` is the result. The GLB is `k-mold-1117b.glb` on the site. It has three clips, and every one has 0 collisions, checked every 2 mm of motion:
+
+| Clip | Length | What happens |
+|---|---|---|
+| build | 52 s | bench board, base plate, then the core piece by piece (the demold paths backwards), bands A to D along their pulls, cap, funnel, rods, bridge, then the pour |
+| pour | 12 s | the front and back shell pieces open as a cutaway, the concrete rises to half height, pauses (the first lift stiffens), then rises to the riser, and the mold closes |
+| demold | 38 s | bridge, rods, funnel and cap off; bands D, C, B, A off along their pulls; the pot off the base; then the core |
+
+**Core demold order (planned, it works):**
+1. KC2 and KC5, the shoulder keys
+2. the neck pieces KD2, KD5, KD1, KD3, KD4, KD6
+3. KC1, KC4, KC3, KC6
+4. KB1, KB2, then KA2, KB3, KA5, KB4
+5. KA1, KA3, KA4, KA6
+
+Every piece leaves through a side opening or the neck.
+
+Three pieces don't come out along the pull in their name:
+- **KA2 and KA5**, the floor keys, meet each other at y = 0, so neither can slide inward. Each one lifts first: KA2 straight up, KA5 up and in.
+- **KC3** frees diagonally, at 45° towards the axis.
+
+Rename those pulls in Onshape, or pull them that way in the shop.
+
+**The build order is corrected.** The core can't be lowered into band A as one unit, because the belly is wider than band A's top. Assemble the core on the base plate first, then close bands A to D around it.

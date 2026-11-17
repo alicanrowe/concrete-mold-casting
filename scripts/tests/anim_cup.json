@@ -1,0 +1,10 @@
+{"name": "cup_mold", "units": "mm", "up": "z", "speed": 300,
+ "parts": {"^BASE": {"role": "base"}, "^CORE": {"role": "core"}, "^S": {"role": "shell"}},
+ "demold": [{"label": "sides", "parts": "^S", "move": "pull", "dist": 150},
+            {"label": "base", "parts": "^BASE", "move": "pull", "dist": 120},
+            {"label": "core", "parts": "^CORE", "move": "plan", "unlock": 20}],
+ "build":  [{"label": "base", "parts": "^BASE", "move": "drop", "dist": 120},
+            {"label": "core", "parts": "^CORE", "move": "reverse"},
+            {"label": "sides", "parts": "^S", "move": "pull", "dist": 150},
+            {"label": "pour", "move": "pour"}],
+ "pour": {"explode": "^S", "dist": 120, "lifts": [0.5, 1.0], "pause": 0.5}}

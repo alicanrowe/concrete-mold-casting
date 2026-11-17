@@ -1,0 +1,43 @@
+{
+ "name": "k_mold",
+ "units": "mm",
+ "up": "z",
+ "speed": 340,
+ "parts": {
+  "^HD1": {"role": "hardware", "material": "wood"},
+  "^HD4": {"role": "hardware", "material": "wood"},
+  "^HD[23]": {"role": "hardware", "material": "steel"},
+  "^BASE": {"role": "base", "material": "base"},
+  "^CAP": {"role": "cap", "material": "shell"},
+  "^F_": {"role": "funnel", "material": "shell"},
+  "^K": {"role": "core", "material": "core"},
+  "^[A-D]\\d": {"role": "shell", "material": "shell"}
+ },
+ "demold": [
+  {"label": "bridge off", "parts": "^HD1", "move": "pull", "dist": 320},
+  {"label": "rods out", "parts": "^HD[23]", "move": "pull", "dist": 450},
+  {"label": "funnel off", "parts": "^F$", "move": "pull", "dist": 300},
+  {"label": "cap off", "parts": "^CAP$", "move": "pull", "dist": 300},
+  {"label": "neck band", "parts": "^D\\d", "move": "pull", "dist": 280},
+  {"label": "shoulder band", "parts": "^C\\d", "move": "pull", "dist": 280},
+  {"label": "belly band", "parts": "^B\\d", "move": "pull", "dist": 280},
+  {"label": "lower band", "parts": "^A\\d", "move": "pull", "dist": 280},
+  {"label": "pot off the base", "parts": "^(BASE|HD4)$", "move": "pull", "dist": 260, "stagger": 0},
+  {"label": "core out", "parts": "^K", "move": "plan", "first": ["key", "Neck", "Shoulder", "Belly"], "avoid": "^(BASE|HD4)$", "unlock": 48, "speed": 850, "overlap": 0.35}
+ ],
+ "build": [
+  {"label": "bench board", "parts": "^HD4$", "move": "pull", "dist": 260},
+  {"label": "base plate", "parts": "^BASE$", "move": "drop", "dist": 260},
+  {"label": "core, piece by piece", "parts": "^K", "move": "reverse", "speed": 850, "overlap": 0.35},
+  {"label": "lower band", "parts": "^A\\d", "move": "pull", "dist": 280},
+  {"label": "belly band", "parts": "^B\\d", "move": "pull", "dist": 280},
+  {"label": "shoulder band", "parts": "^C\\d", "move": "pull", "dist": 280},
+  {"label": "neck band", "parts": "^D\\d", "move": "pull", "dist": 280},
+  {"label": "cap", "parts": "^CAP$", "move": "pull", "dist": 300},
+  {"label": "funnel", "parts": "^F$", "move": "pull", "dist": 300},
+  {"label": "rods", "parts": "^HD[23]$", "move": "pull", "dist": 450},
+  {"label": "bridge", "parts": "^HD1$", "move": "pull", "dist": 320},
+  {"label": "pour", "move": "pour"}
+ ],
+ "pour": {"explode": "^[A-C][123567]$", "dist": 240, "lifts": [0.5, 1.0], "pause": 1.6, "rise_mm_s": 170}
+}

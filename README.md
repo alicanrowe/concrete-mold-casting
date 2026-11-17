@@ -45,6 +45,11 @@ A Claude skill for designing multi-part molds for cast concrete and GFRC, checki
 
   You can patch a fix into the spec (open a lid, close an opening, plug a vent) and re-check before re-modelling.
 - **`scripts/gfrc_batch.py`**: turns litres per unit into a shopping list and per-bucket weights, for a bagged GFRC mix or a mix from scratch, with pigment dosed on the cement.
+- **`scripts/moldanim.py`**: builds the animations from the checked mold as one GLB with three clips, `build`, `pour` and `demold`, ready for model-viewer or three.js.
+  - Outside pieces move along their pulls.
+  - Core pieces get planned exit paths (a configuration-space search past the cast and the pieces still in), in an order that works.
+  - Every clip is checked every 2 mm of motion, so no piece passes through another or through the cast.
+  - `scripts/animpreview.js` renders each clip to an MP4 and a contact sheet on white, in the same viewer the site uses. See `references/animation.md`.
 - **`examples/k-concrete-vessels/`**: the worked example: nine 35 in black GFRC planters from a 53-piece printed mold. It has the specs, the checker output, what each flag meant, the fixes, the mix, the pour-day steps and the 9-pot schedule.
 - **`scripts/tests/`**: builds a small cup mold once correctly and once each with a mistake planted, and checks the checker against them:
   - undercut
@@ -59,15 +64,18 @@ A Claude skill for designing multi-part molds for cast concrete and GFRC, checki
 
   Current result: 9 of 9 mistakes caught, and no false alarms on the good mold.
 
+  `run_anim_tests.py` does the same for the animations. The good cup animates clean, the undercut core is reported as having no way out, and a base driven down through the sides is caught: 4 of 4 pass.
+
 ## Install
 - **Claude.ai / Claude app:** zip this folder and upload it under Settings > Capabilities > Skills.
 - **Claude Code:** copy the folder to `~/.claude/skills/concrete-mold-casting/`.
-- Requirements: `pip install trimesh manifold3d numpy scipy scikit-image`.
+- Requirements: `pip install trimesh manifold3d numpy scipy scikit-image fast_simplification`. The previews also need Node with `playwright` and `ffmpeg`.
 
 ## Quick start
 ```
 python3 scripts/moldcheck.py mold_stls/ --spec planter.moldcheck.json --res 2 --json out.json
 python3 scripts/gfrc_batch.py --from-check out.json --units 9 --test 1 --imperial
+python3 scripts/moldanim.py mold_stls/ --cast vessel.stl --spec planter.anim.json --out planter-mold.glb --report anim.json
 ```
 Example spec:
 ```json
