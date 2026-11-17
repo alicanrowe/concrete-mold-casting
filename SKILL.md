@@ -1,6 +1,8 @@
 ---
 name: concrete-mold-casting
 description: Use when designing, checking or producing a cast concrete or GFRC piece (planters, vessels, basins, panels, furniture) from a multi-part mold: printed or CNC molds, silicone or fiberglass mother molds, draft and parting lines, GFRC mix with integral pigment, reinforcement, pour, cure, demold and a small production run. Checks the mold model for pour path, leaks, flooding, air traps, undercuts, draft and core uplift.
+metadata:
+  author: Alican Rowe (@alicanrowe)
 ---
 
 # Concrete mold casting

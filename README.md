@@ -85,5 +85,9 @@ Name each part with its pull: `A3_pull_137_deg` (horizontal, degrees countercloc
 - Voxel results move slightly with resolution, so run two resolutions and trust flags that appear at both.
 - It's a second pair of eyes. Cut a section through the cast and make a test pour.
 
+## Authors
+- **Alican Rowe** ([@alicanrowe](https://github.com/alicanrowe))
+- Claude (Anthropic)
+
 ## License
 MIT. See `LICENSE`.
