@@ -1,0 +1,1393 @@
+{
+ "parts": {
+  "A1_Mold_Lower_1_pull_70_deg": {
+   "watertight": true,
+   "winding": true,
+   "bodies": 1,
+   "volume_cm3": 330.0,
+   "pull": [
+    0.342,
+    0.94,
+    0.0
+   ],
+   "role": "mold",
+   "wet_cm2": 274.0,
+   "force_N": [
+    241.4,
+    278.0,
+    -244.6
+   ],
+   "draft_pct": {
+    "undercut": 0.0,
+    "low": 0.0,
+    "ok": 100.0
+   },
+   "push_off_N": 343.8
+  },
+  "A2_Mold_Lower_2_pull_70_deg": {
+   "watertight": true,
+   "winding": true,
+   "bodies": 1,
+   "volume_cm3": 330.4,
+   "pull": [
+    0.342,
+    0.94,
+    0.0
+   ],
+   "role": "mold",
+   "wet_cm2": 274.3,
+   "force_N": [
+    -6.3,
+    368.6,
+    -244.9
+   ],
+   "draft_pct": {
+    "undercut": 0.0,
+    "low": 0.0,
+    "ok": 100.0
+   },
+   "push_off_N": 344.2
+  },
+  "A3_Mold_Lower_3_pull_137_deg": {
+   "watertight": true,
+   "winding": true,
+   "bodies": 1,
+   "volume_cm3": 395.8,
+   "pull": [
+    -0.731,
+    0.682,
+    0.0
+   ],
+   "role": "mold",
+   "wet_cm2": 317.4,
+   "force_N": [
+    -303.9,
+    286.7,
+    -319.2
+   ],
+   "draft_pct": {
+    "undercut": 0.0,
+    "low": 0.0,
+    "ok": 100.0
+   },
+   "push_off_N": 417.8
+  },
+  "A4_Mold_Lower_4_pull_180_deg": {
+   "watertight": true,
+   "winding": true,
+   "bodies": 1,
+   "volume_cm3": 395.8,
+   "pull": [
+    -1.0,
+    0.0,
+    0.0
+   ],
+   "role": "mold",
+   "wet_cm2": 317.7,
+   "force_N": [
+    -418.3,
+    0.0,
+    -319.6
+   ],
+   "draft_pct": {
+    "undercut": 0.0,
+    "low": 0.0,
+    "ok": 100.0
+   },
+   "push_off_N": 418.3
+  },
+  "A5_Mold_Lower_5_pull_223_deg": {
+   "watertight": true,
+   "winding": true,
+   "bodies": 1,
+   "volume_cm3": 395.8,
+   "pull": [
+    -0.731,
+    -0.682,
+    0.0
+   ],
+   "role": "mold",
+   "wet_cm2": 317.4,
+   "force_N": [
+    -303.8,
+    -286.8,
+    -319.2
+   ],
+   "draft_pct": {
+    "undercut": 0.0,
+    "low": 0.0,
+    "ok": 100.0
+   },
+   "push_off_N": 417.8
+  },
+  "A6_Mold_Lower_6_pull_290_deg": {
+   "watertight": true,
+   "winding": true,
+   "bodies": 1,
+   "volume_cm3": 330.4,
+   "pull": [
+    0.342,
+    -0.94,
+    0.0
+   ],
+   "role": "mold",
+   "wet_cm2": 274.2,
+   "force_N": [
+    -6.4,
+    -368.5,
+    -244.8
+   ],
+   "draft_pct": {
+    "undercut": 0.0,
+    "low": 0.0,
+    "ok": 100.0
+   },
+   "push_off_N": 344.1
+  },
+  "A7_Mold_Lower_7_pull_290_deg": {
+   "watertight": true,
+   "winding": true,
+   "bodies": 1,
+   "volume_cm3": 330.0,
+   "pull": [
+    0.342,
+    -0.94,
+    0.0
+   ],
+   "role": "mold",
+   "wet_cm2": 273.8,
+   "force_N": [
+    241.2,
+    -277.8,
+    -244.3
+   ],
+   "draft_pct": {
+    "undercut": 0.0,
+    "low": 0.0,
+    "ok": 100.0
+   },
+   "push_off_N": 343.5
+  },
+  "A8_Mold_Lower_8_pull_0_deg": {
+   "watertight": true,
+   "winding": true,
+   "bodies": 1,
+   "volume_cm3": 442.8,
+   "pull": [
+    1.0,
+    0.0,
+    0.0
+   ],
+   "role": "mold",
+   "wet_cm2": 366.6,
+   "force_N": [
+    478.8,
+    -0.0,
+    -368.7
+   ],
+   "draft_pct": {
+    "undercut": 0.0,
+    "low": 0.0,
+    "ok": 100.0
+   },
+   "push_off_N": 478.8
+  },
+  "B1_Mold_Belly_1_pull_70_deg": {
+   "watertight": true,
+   "winding": true,
+   "bodies": 1,
+   "volume_cm3": 122.1,
+   "pull": [
+    0.342,
+    0.94,
+    0.0
+   ],
+   "role": "mold",
+   "wet_cm2": 55.8,
+   "force_N": [
+    37.2,
+    62.8,
+    -9.4
+   ],
+   "draft_pct": {
+    "undercut": 0.0,
+    "low": 0.0,
+    "ok": 100.0
+   },
+   "push_off_N": 71.7
+  },
+  "B2_Mold_Belly_2_pull_70_deg": {
+   "watertight": true,
+   "winding": true,
+   "bodies": 1,
+   "volume_cm3": 122.4,
+   "pull": [
+    0.342,
+    0.94,
+    0.0
+   ],
+   "role": "mold",
+   "wet_cm2": 56.0,
+   "force_N": [
+    11.9,
+    72.2,
+    -9.4
+   ],
+   "draft_pct": {
+    "undercut": 0.0,
+    "low": 0.0,
+    "ok": 100.0
+   },
+   "push_off_N": 71.9
+  },
+  "B3_Mold_Belly_3_pull_137_deg": {
+   "watertight": true,
+   "winding": true,
+   "bodies": 1,
+   "volume_cm3": 445.2,
+   "pull": [
+    -0.731,
+    0.682,
+    0.0
+   ],
+   "role": "mold",
+   "wet_cm2": 387.4,
+   "force_N": [
+    -344.1,
+    335.8,
+    -142.5
+   ],
+   "draft_pct": {
+    "undercut": 0.0,
+    "low": 0.0,
+    "ok": 100.0
+   },
+   "push_off_N": 480.7
+  },
+  "B4_Mold_Belly_4_pull_180_deg": {
+   "watertight": true,
+   "winding": true,
+   "bodies": 1,
+   "volume_cm3": 441.8,
+   "pull": [
+    -1.0,
+    0.0,
+    0.0
+   ],
+   "role": "mold",
+   "wet_cm2": 384.7,
+   "force_N": [
+    -484.0,
+    0.0,
+    -143.5
+   ],
+   "draft_pct": {
+    "undercut": 0.0,
+    "low": 0.0,
+    "ok": 100.0
+   },
+   "push_off_N": 484.0
+  },
+  "B5_Mold_Belly_5_pull_223_deg": {
+   "watertight": true,
+   "winding": true,
+   "bodies": 1,
+   "volume_cm3": 445.2,
+   "pull": [
+    -0.731,
+    -0.682,
+    0.0
+   ],
+   "role": "mold",
+   "wet_cm2": 387.4,
+   "force_N": [
+    -344.1,
+    -335.8,
+    -142.5
+   ],
+   "draft_pct": {
+    "undercut": 0.0,
+    "low": 0.0,
+    "ok": 100.0
+   },
+   "push_off_N": 480.7
+  },
+  "B6_Mold_Belly_6_pull_290_deg": {
+   "watertight": true,
+   "winding": true,
+   "bodies": 1,
+   "volume_cm3": 122.4,
+   "pull": [
+    0.342,
+    -0.94,
+    0.0
+   ],
+   "role": "mold",
+   "wet_cm2": 56.0,
+   "force_N": [
+    11.9,
+    -72.2,
+    -9.4
+   ],
+   "draft_pct": {
+    "undercut": 0.0,
+    "low": 0.0,
+    "ok": 100.0
+   },
+   "push_off_N": 71.9
+  },
+  "B7_Mold_Belly_7_pull_290_deg": {
+   "watertight": true,
+   "winding": true,
+   "bodies": 1,
+   "volume_cm3": 122.1,
+   "pull": [
+    0.342,
+    -0.94,
+    0.0
+   ],
+   "role": "mold",
+   "wet_cm2": 55.6,
+   "force_N": [
+    37.2,
+    -62.6,
+    -9.4
+   ],
+   "draft_pct": {
+    "undercut": 0.0,
+    "low": 0.0,
+    "ok": 100.0
+   },
+   "push_off_N": 71.5
+  },
+  "B8_Mold_Belly_8_pull_0_deg": {
+   "watertight": true,
+   "winding": true,
+   "bodies": 1,
+   "volume_cm3": 504.8,
+   "pull": [
+    1.0,
+    0.0,
+    0.0
+   ],
+   "role": "mold",
+   "wet_cm2": 449.4,
+   "force_N": [
+    546.6,
+    -0.0,
+    -163.5
+   ],
+   "draft_pct": {
+    "undercut": 0.0,
+    "low": 0.0,
+    "ok": 100.0
+   },
+   "push_off_N": 546.6
+  },
+  "BASE_Mold_Base_plate_pull_down": {
+   "watertight": true,
+   "winding": true,
+   "bodies": 1,
+   "volume_cm3": 830.6,
+   "pull": [
+    0.0,
+    0.0,
+    -1.0
+   ],
+   "role": "mold",
+   "wet_cm2": 754.4,
+   "force_N": [
+    -0.3,
+    -0.0,
+    -1048.3
+   ],
+   "draft_pct": {
+    "undercut": 0.0,
+    "low": 25.8,
+    "ok": 74.2
+   },
+   "push_off_N": 1048.3
+  },
+  "C1_Mold_Shoulder_1_pull_70_deg": {
+   "watertight": true,
+   "winding": true,
+   "bodies": 1,
+   "volume_cm3": 310.6,
+   "pull": [
+    0.342,
+    0.94,
+    0.0
+   ],
+   "role": "mold",
+   "wet_cm2": 229.1,
+   "force_N": [
+    91.9,
+    123.1,
+    56.4
+   ],
+   "draft_pct": {
+    "undercut": 0.0,
+    "low": 0.0,
+    "ok": 100.0
+   },
+   "push_off_N": 147.1
+  },
+  "C2_Mold_Shoulder_2_pull_70_deg": {
+   "watertight": true,
+   "winding": true,
+   "bodies": 1,
+   "volume_cm3": 310.4,
+   "pull": [
+    0.342,
+    0.94,
+    0.0
+   ],
+   "role": "mold",
+   "wet_cm2": 229.2,
+   "force_N": [
+    8.8,
+    153.5,
+    56.4
+   ],
+   "draft_pct": {
+    "undercut": 0.0,
+    "low": 0.0,
+    "ok": 100.0
+   },
+   "push_off_N": 147.3
+  },
+  "C3_Mold_Shoulder_3_pull_137_deg": {
+   "watertight": true,
+   "winding": true,
+   "bodies": 1,
+   "volume_cm3": 633.9,
+   "pull": [
+    -0.731,
+    0.682,
+    0.0
+   ],
+   "role": "mold",
+   "wet_cm2": 602.7,
+   "force_N": [
+    -351.3,
+    341.7,
+    187.3
+   ],
+   "draft_pct": {
+    "undercut": 0.0,
+    "low": 0.0,
+    "ok": 100.0
+   },
+   "push_off_N": 490.0
+  },
+  "C4_Mold_Shoulder_4_pull_180_deg": {
+   "watertight": true,
+   "winding": true,
+   "bodies": 1,
+   "volume_cm3": 630.6,
+   "pull": [
+    -1.0,
+    0.0,
+    0.0
+   ],
+   "role": "mold",
+   "wet_cm2": 599.9,
+   "force_N": [
+    -493.0,
+    -0.0,
+    188.2
+   ],
+   "draft_pct": {
+    "undercut": 0.0,
+    "low": 0.0,
+    "ok": 100.0
+   },
+   "push_off_N": 493.0
+  },
+  "C5_Mold_Shoulder_5_pull_223_deg": {
+   "watertight": true,
+   "winding": true,
+   "bodies": 1,
+   "volume_cm3": 633.9,
+   "pull": [
+    -0.731,
+    -0.682,
+    0.0
+   ],
+   "role": "mold",
+   "wet_cm2": 602.4,
+   "force_N": [
+    -351.2,
+    -341.6,
+    187.2
+   ],
+   "draft_pct": {
+    "undercut": 0.0,
+    "low": 0.0,
+    "ok": 100.0
+   },
+   "push_off_N": 489.8
+  },
+  "C6_Mold_Shoulder_6_pull_290_deg": {
+   "watertight": true,
+   "winding": true,
+   "bodies": 1,
+   "volume_cm3": 310.4,
+   "pull": [
+    0.342,
+    -0.94,
+    0.0
+   ],
+   "role": "mold",
+   "wet_cm2": 229.0,
+   "force_N": [
+    8.8,
+    -153.3,
+    56.4
+   ],
+   "draft_pct": {
+    "undercut": 0.0,
+    "low": 0.0,
+    "ok": 100.0
+   },
+   "push_off_N": 147.1
+  },
+  "C7_Mold_Shoulder_7_pull_290_deg": {
+   "watertight": true,
+   "winding": true,
+   "bodies": 1,
+   "volume_cm3": 310.6,
+   "pull": [
+    0.342,
+    -0.94,
+    0.0
+   ],
+   "role": "mold",
+   "wet_cm2": 228.9,
+   "force_N": [
+    91.8,
+    -122.9,
+    56.4
+   ],
+   "draft_pct": {
+    "undercut": 0.0,
+    "low": 0.0,
+    "ok": 100.0
+   },
+   "push_off_N": 146.9
+  },
+  "C8_Mold_Shoulder_8_pull_0_deg": {
+   "watertight": true,
+   "winding": true,
+   "bodies": 1,
+   "volume_cm3": 713.6,
+   "pull": [
+    1.0,
+    0.0,
+    0.0
+   ],
+   "role": "mold",
+   "wet_cm2": 697.9,
+   "force_N": [
+    557.6,
+    -0.0,
+    215.4
+   ],
+   "draft_pct": {
+    "undercut": 0.0,
+    "low": 0.0,
+    "ok": 100.0
+   },
+   "push_off_N": 557.6
+  },
+  "CAP_Core_pour_cap_pull_up": {
+   "watertight": true,
+   "winding": true,
+   "bodies": 1,
+   "volume_cm3": 551.9,
+   "pull": [
+    0.0,
+    0.0,
+    1.0
+   ],
+   "role": "mold",
+   "wet_cm2": 0.0
+  },
+  "D1_Mold_Neck_1_pull_90_deg": {
+   "watertight": true,
+   "winding": true,
+   "bodies": 1,
+   "volume_cm3": 713.5,
+   "pull": [
+    0.0,
+    1.0,
+    0.0
+   ],
+   "role": "mold",
+   "wet_cm2": 711.8,
+   "force_N": [
+    -0.0,
+    189.8,
+    86.7
+   ],
+   "draft_pct": {
+    "undercut": 0.0,
+    "low": 1.1,
+    "ok": 98.9
+   },
+   "push_off_N": 189.8
+  },
+  "D2_Mold_Neck_2_pull_180_deg": {
+   "watertight": true,
+   "winding": true,
+   "bodies": 1,
+   "volume_cm3": 713.1,
+   "pull": [
+    -1.0,
+    0.0,
+    0.0
+   ],
+   "role": "mold",
+   "wet_cm2": 711.7,
+   "force_N": [
+    -189.8,
+    -0.0,
+    86.7
+   ],
+   "draft_pct": {
+    "undercut": 0.0,
+    "low": 1.1,
+    "ok": 98.9
+   },
+   "push_off_N": 189.8
+  },
+  "D3_Mold_Neck_3_pull_270_deg": {
+   "watertight": true,
+   "winding": true,
+   "bodies": 1,
+   "volume_cm3": 713.4,
+   "pull": [
+    -0.0,
+    -1.0,
+    0.0
+   ],
+   "role": "mold",
+   "wet_cm2": 711.8,
+   "force_N": [
+    0.0,
+    -189.8,
+    86.7
+   ],
+   "draft_pct": {
+    "undercut": 0.0,
+    "low": 1.1,
+    "ok": 98.9
+   },
+   "push_off_N": 189.8
+  },
+  "D4_Mold_Neck_4_pull_0_deg": {
+   "watertight": true,
+   "winding": true,
+   "bodies": 1,
+   "volume_cm3": 713.4,
+   "pull": [
+    1.0,
+    0.0,
+    0.0
+   ],
+   "role": "mold",
+   "wet_cm2": 711.6,
+   "force_N": [
+    189.7,
+    -0.1,
+    86.6
+   ],
+   "draft_pct": {
+    "undercut": 0.0,
+    "low": 1.1,
+    "ok": 98.9
+   },
+   "push_off_N": 189.7
+  },
+  "F_Pour_funnel_pull_up": {
+   "watertight": true,
+   "winding": true,
+   "bodies": 1,
+   "volume_cm3": 641.0,
+   "pull": [
+    0.0,
+    0.0,
+    1.0
+   ],
+   "role": "mold",
+   "wet_cm2": 0.0
+  },
+  "KA1_Core_Lower_6_pull_180_deg": {
+   "watertight": true,
+   "winding": true,
+   "bodies": 1,
+   "volume_cm3": 314.7,
+   "pull": [
+    -1.0,
+    0.0,
+    0.0
+   ],
+   "role": "mold",
+   "wet_cm2": 382.8,
+   "force_N": [
+    -385.6,
+    -216.9,
+    415.3
+   ],
+   "draft_pct": {
+    "undercut": 0.0,
+    "low": 8.9,
+    "ok": 91.1
+   },
+   "push_off_N": 385.6
+  },
+  "KA2_Core_Lower_key_4_pull_270_deg": {
+   "watertight": true,
+   "winding": true,
+   "bodies": 1,
+   "volume_cm3": 362.3,
+   "pull": [
+    -0.0,
+    -1.0,
+    0.0
+   ],
+   "role": "mold",
+   "wet_cm2": 430.7,
+   "force_N": [
+    9.8,
+    -322.9,
+    594.7
+   ],
+   "draft_pct": {
+    "undercut": 0.0,
+    "low": 41.4,
+    "ok": 58.6
+   },
+   "push_off_N": 322.9
+  },
+  "KA3_Core_Lower_2_pull_0_deg": {
+   "watertight": true,
+   "winding": true,
+   "bodies": 1,
+   "volume_cm3": 353.6,
+   "pull": [
+    1.0,
+    0.0,
+    0.0
+   ],
+   "role": "mold",
+   "wet_cm2": 415.6,
+   "force_N": [
+    414.2,
+    -268.0,
+    431.2
+   ],
+   "draft_pct": {
+    "undercut": 0.0,
+    "low": 5.5,
+    "ok": 94.5
+   },
+   "push_off_N": 414.2
+  },
+  "KA4_Core_Lower_1_pull_0_deg": {
+   "watertight": true,
+   "winding": true,
+   "bodies": 1,
+   "volume_cm3": 353.6,
+   "pull": [
+    1.0,
+    0.0,
+    0.0
+   ],
+   "role": "mold",
+   "wet_cm2": 426.8,
+   "force_N": [
+    414.3,
+    268.2,
+    451.6
+   ],
+   "draft_pct": {
+    "undercut": 0.0,
+    "low": 8.0,
+    "ok": 92.0
+   },
+   "push_off_N": 414.3
+  },
+  "KA5_Core_Lower_key_3_pull_90_deg": {
+   "watertight": true,
+   "winding": true,
+   "bodies": 1,
+   "volume_cm3": 362.3,
+   "pull": [
+    0.0,
+    1.0,
+    0.0
+   ],
+   "role": "mold",
+   "wet_cm2": 429.7,
+   "force_N": [
+    9.8,
+    322.9,
+    593.0
+   ],
+   "draft_pct": {
+    "undercut": 0.0,
+    "low": 41.2,
+    "ok": 58.7
+   },
+   "push_off_N": 322.9
+  },
+  "KA6_Core_Lower_5_pull_180_deg": {
+   "watertight": true,
+   "winding": true,
+   "bodies": 1,
+   "volume_cm3": 314.7,
+   "pull": [
+    -1.0,
+    0.0,
+    0.0
+   ],
+   "role": "mold",
+   "wet_cm2": 382.1,
+   "force_N": [
+    -385.6,
+    216.8,
+    413.9
+   ],
+   "draft_pct": {
+    "undercut": 0.0,
+    "low": 8.7,
+    "ok": 91.3
+   },
+   "push_off_N": 385.6
+  },
+  "KB1_Core_Belly_12_pull_180_deg": {
+   "watertight": true,
+   "winding": true,
+   "bodies": 1,
+   "volume_cm3": 223.8,
+   "pull": [
+    -1.0,
+    0.0,
+    0.0
+   ],
+   "role": "mold",
+   "wet_cm2": 247.8,
+   "force_N": [
+    -304.2,
+    -81.2,
+    103.4
+   ],
+   "draft_pct": {
+    "undercut": 0.0,
+    "low": 0.0,
+    "ok": 100.0
+   },
+   "push_off_N": 304.2
+  },
+  "KB2_Core_Belly_8_pull_0_deg": {
+   "watertight": true,
+   "winding": true,
+   "bodies": 1,
+   "volume_cm3": 484.2,
+   "pull": [
+    1.0,
+    0.0,
+    0.0
+   ],
+   "role": "mold",
+   "wet_cm2": 579.8,
+   "force_N": [
+    572.7,
+    -400.1,
+    233.2
+   ],
+   "draft_pct": {
+    "undercut": 0.0,
+    "low": 0.0,
+    "ok": 100.0
+   },
+   "push_off_N": 572.7
+  },
+  "KB3_Core_Belly_7_pull_0_deg": {
+   "watertight": true,
+   "winding": true,
+   "bodies": 1,
+   "volume_cm3": 484.2,
+   "pull": [
+    1.0,
+    0.0,
+    0.0
+   ],
+   "role": "mold",
+   "wet_cm2": 579.6,
+   "force_N": [
+    572.6,
+    400.0,
+    233.3
+   ],
+   "draft_pct": {
+    "undercut": 0.0,
+    "low": 0.0,
+    "ok": 100.0
+   },
+   "push_off_N": 572.6
+  },
+  "KB4_Core_Belly_11_pull_180_deg": {
+   "watertight": true,
+   "winding": true,
+   "bodies": 1,
+   "volume_cm3": 223.8,
+   "pull": [
+    -1.0,
+    0.0,
+    0.0
+   ],
+   "role": "mold",
+   "wet_cm2": 247.6,
+   "force_N": [
+    -303.9,
+    81.1,
+    103.4
+   ],
+   "draft_pct": {
+    "undercut": 0.0,
+    "low": 0.0,
+    "ok": 100.0
+   },
+   "push_off_N": 303.9
+  },
+  "KC1_Core_Shoulder_18_pull_180_deg": {
+   "watertight": true,
+   "winding": true,
+   "bodies": 1,
+   "volume_cm3": 426.5,
+   "pull": [
+    -1.0,
+    0.0,
+    0.0
+   ],
+   "role": "mold",
+   "wet_cm2": 512.5,
+   "force_N": [
+    -358.5,
+    -133.9,
+    -180.6
+   ],
+   "draft_pct": {
+    "undercut": 0.0,
+    "low": 0.0,
+    "ok": 100.0
+   },
+   "push_off_N": 358.5
+  },
+  "KC2_Core_Shoulder_key_16_pull_270_deg": {
+   "watertight": true,
+   "winding": true,
+   "bodies": 1,
+   "volume_cm3": 174.5,
+   "pull": [
+    -0.0,
+    -1.0,
+    0.0
+   ],
+   "role": "mold",
+   "wet_cm2": 164.5,
+   "force_N": [
+    5.7,
+    -94.7,
+    -66.9
+   ],
+   "draft_pct": {
+    "undercut": 0.0,
+    "low": 0.0,
+    "ok": 100.0
+   },
+   "push_off_N": 94.7
+  },
+  "KC3_Core_Shoulder_14_pull_0_deg": {
+   "watertight": true,
+   "winding": true,
+   "bodies": 1,
+   "volume_cm3": 677.6,
+   "pull": [
+    1.0,
+    0.0,
+    0.0
+   ],
+   "role": "mold",
+   "wet_cm2": 881.5,
+   "force_N": [
+    574.6,
+    -393.9,
+    -287.9
+   ],
+   "draft_pct": {
+    "undercut": 0.0,
+    "low": 0.0,
+    "ok": 100.0
+   },
+   "push_off_N": 574.6
+  },
+  "KC4_Core_Shoulder_13_pull_0_deg": {
+   "watertight": true,
+   "winding": true,
+   "bodies": 1,
+   "volume_cm3": 677.5,
+   "pull": [
+    1.0,
+    0.0,
+    0.0
+   ],
+   "role": "mold",
+   "wet_cm2": 881.3,
+   "force_N": [
+    574.5,
+    393.6,
+    -287.8
+   ],
+   "draft_pct": {
+    "undercut": 0.0,
+    "low": 0.0,
+    "ok": 100.0
+   },
+   "push_off_N": 574.5
+  },
+  "KC5_Core_Shoulder_key_15_pull_90_deg": {
+   "watertight": true,
+   "winding": true,
+   "bodies": 1,
+   "volume_cm3": 174.5,
+   "pull": [
+    0.0,
+    1.0,
+    0.0
+   ],
+   "role": "mold",
+   "wet_cm2": 164.5,
+   "force_N": [
+    5.7,
+    94.8,
+    -66.9
+   ],
+   "draft_pct": {
+    "undercut": 0.0,
+    "low": 0.0,
+    "ok": 100.0
+   },
+   "push_off_N": 94.8
+  },
+  "KC6_Core_Shoulder_17_pull_180_deg": {
+   "watertight": true,
+   "winding": true,
+   "bodies": 1,
+   "volume_cm3": 426.5,
+   "pull": [
+    -1.0,
+    0.0,
+    0.0
+   ],
+   "role": "mold",
+   "wet_cm2": 512.5,
+   "force_N": [
+    -358.4,
+    133.9,
+    -180.6
+   ],
+   "draft_pct": {
+    "undercut": 0.0,
+    "low": 0.0,
+    "ok": 100.0
+   },
+   "push_off_N": 358.4
+  },
+  "KD1_Core_Neck_24_pull_180_deg": {
+   "watertight": true,
+   "winding": true,
+   "bodies": 1,
+   "volume_cm3": 361.9,
+   "pull": [
+    -1.0,
+    0.0,
+    0.0
+   ],
+   "role": "mold",
+   "wet_cm2": 414.7,
+   "force_N": [
+    -107.2,
+    -77.5,
+    -59.0
+   ],
+   "draft_pct": {
+    "undercut": 0.0,
+    "low": 0.0,
+    "ok": 100.0
+   },
+   "push_off_N": 107.2
+  },
+  "KD2_Core_Neck_key_22_pull_270_deg": {
+   "watertight": true,
+   "winding": true,
+   "bodies": 1,
+   "volume_cm3": 242.5,
+   "pull": [
+    -0.0,
+    -1.0,
+    0.0
+   ],
+   "role": "mold",
+   "wet_cm2": 231.2,
+   "force_N": [
+    0.0,
+    -71.5,
+    -26.6
+   ],
+   "draft_pct": {
+    "undercut": 0.0,
+    "low": 0.0,
+    "ok": 100.0
+   },
+   "push_off_N": 71.5
+  },
+  "KD3_Core_Neck_20_pull_0_deg": {
+   "watertight": true,
+   "winding": true,
+   "bodies": 1,
+   "volume_cm3": 361.9,
+   "pull": [
+    1.0,
+    0.0,
+    0.0
+   ],
+   "role": "mold",
+   "wet_cm2": 414.3,
+   "force_N": [
+    107.1,
+    -77.4,
+    -58.9
+   ],
+   "draft_pct": {
+    "undercut": 0.0,
+    "low": 0.0,
+    "ok": 100.0
+   },
+   "push_off_N": 107.1
+  },
+  "KD4_Core_Neck_19_pull_0_deg": {
+   "watertight": true,
+   "winding": true,
+   "bodies": 1,
+   "volume_cm3": 361.9,
+   "pull": [
+    1.0,
+    0.0,
+    0.0
+   ],
+   "role": "mold",
+   "wet_cm2": 414.4,
+   "force_N": [
+    107.2,
+    77.4,
+    -58.9
+   ],
+   "draft_pct": {
+    "undercut": 0.0,
+    "low": 0.0,
+    "ok": 100.0
+   },
+   "push_off_N": 107.2
+  },
+  "KD5_Core_Neck_key_21_pull_90_deg": {
+   "watertight": true,
+   "winding": true,
+   "bodies": 1,
+   "volume_cm3": 242.5,
+   "pull": [
+    0.0,
+    1.0,
+    0.0
+   ],
+   "role": "mold",
+   "wet_cm2": 231.2,
+   "force_N": [
+    0.0,
+    71.5,
+    -26.6
+   ],
+   "draft_pct": {
+    "undercut": 0.0,
+    "low": 0.0,
+    "ok": 100.0
+   },
+   "push_off_N": 71.5
+  },
+  "KD6_Core_Neck_23_pull_180_deg": {
+   "watertight": true,
+   "winding": true,
+   "bodies": 1,
+   "volume_cm3": 361.9,
+   "pull": [
+    -1.0,
+    0.0,
+    0.0
+   ],
+   "role": "mold",
+   "wet_cm2": 414.4,
+   "force_N": [
+    -107.2,
+    77.4,
+    -58.9
+   ],
+   "draft_pct": {
+    "undercut": 0.0,
+    "low": 0.0,
+    "ok": 100.0
+   },
+   "push_off_N": 107.2
+  }
+ },
+ "res_mm": 1.7,
+ "pour_lands_at_z": 434.8,
+ "cast_cm3": 19042.6,
+ "cast_below_rim_cm3": 18499.3,
+ "riser_cm3": 543.3,
+ "cast_kg": 38.8,
+ "wall_mm": {
+  "p5": 19.2,
+  "p50": 19.5,
+  "p95": 20.4
+ },
+ "group_force_N": {
+  "core": [
+   1057.6,
+   -0.3,
+   2213.7
+  ],
+  "shell": [
+   -1041.6,
+   0.9,
+   -1585.0
+  ]
+ },
+ "print_cm3": 21974.8,
+ "print_kg_solid": 27.9,
+ "flags": [
+  {
+   "kind": "bed",
+   "where": "BASE_Mold_Base_plate_pull_down",
+   "msg": "371 x 371 x 35 mm doesn't fit [325, 320, 325]"
+  },
+  {
+   "kind": "bed",
+   "where": "C1_Mold_Shoulder_1_pull_70_deg",
+   "msg": "338 x 196 x 71 mm doesn't fit [325, 320, 325]"
+  },
+  {
+   "kind": "bed",
+   "where": "C2_Mold_Shoulder_2_pull_70_deg",
+   "msg": "367 x 182 x 70 mm doesn't fit [325, 320, 325]"
+  },
+  {
+   "kind": "bed",
+   "where": "C6_Mold_Shoulder_6_pull_290_deg",
+   "msg": "339 x 196 x 70 mm doesn't fit [325, 320, 325]"
+  },
+  {
+   "kind": "bed",
+   "where": "C7_Mold_Shoulder_7_pull_290_deg",
+   "msg": "366 x 175 x 94 mm doesn't fit [325, 320, 325]"
+  },
+  {
+   "kind": "bed",
+   "where": "D1_Mold_Neck_1_pull_90_deg",
+   "msg": "343 x 332 x 102 mm doesn't fit [325, 320, 325]"
+  },
+  {
+   "kind": "bed",
+   "where": "D2_Mold_Neck_2_pull_180_deg",
+   "msg": "344 x 331 x 108 mm doesn't fit [325, 320, 325]"
+  },
+  {
+   "kind": "bed",
+   "where": "D3_Mold_Neck_3_pull_270_deg",
+   "msg": "343 x 332 x 102 mm doesn't fit [325, 320, 325]"
+  },
+  {
+   "kind": "bed",
+   "where": "D4_Mold_Neck_4_pull_0_deg",
+   "msg": "343 x 332 x 105 mm doesn't fit [325, 320, 325]"
+  },
+  {
+   "kind": "bed",
+   "where": "F_Pour_funnel_pull_up",
+   "msg": "362 x 362 x 64 mm doesn't fit [325, 320, 325]"
+  },
+  {
+   "kind": "bed",
+   "where": "KB2_Core_Belly_8_pull_0_deg",
+   "msg": "337 x 193 x 92 mm doesn't fit [325, 320, 325]"
+  },
+  {
+   "kind": "bed",
+   "where": "KB3_Core_Belly_7_pull_0_deg",
+   "msg": "338 x 203 x 87 mm doesn't fit [325, 320, 325]"
+  },
+  {
+   "kind": "bed",
+   "where": "KC1_Core_Shoulder_18_pull_180_deg",
+   "msg": "344 x 213 x 80 mm doesn't fit [325, 320, 325]"
+  },
+  {
+   "kind": "bed",
+   "where": "KC6_Core_Shoulder_17_pull_180_deg",
+   "msg": "344 x 213 x 80 mm doesn't fit [325, 320, 325]"
+  },
+  {
+   "kind": "low_draft",
+   "where": "BASE_Mold_Base_plate_pull_down",
+   "msg": "194.8 cm^2 (26%) of its concrete face has under 1.0 deg draft",
+   "cm2": 194.8
+  },
+  {
+   "kind": "low_draft",
+   "where": "KA1_Core_Lower_6_pull_180_deg",
+   "msg": "33.9 cm^2 (9%) of its concrete face has under 1.0 deg draft",
+   "cm2": 33.9
+  },
+  {
+   "kind": "low_draft",
+   "where": "KA2_Core_Lower_key_4_pull_270_deg",
+   "msg": "178.2 cm^2 (41%) of its concrete face has under 1.0 deg draft",
+   "cm2": 178.2
+  },
+  {
+   "kind": "low_draft",
+   "where": "KA3_Core_Lower_2_pull_0_deg",
+   "msg": "22.9 cm^2 (6%) of its concrete face has under 1.0 deg draft",
+   "cm2": 22.9
+  },
+  {
+   "kind": "low_draft",
+   "where": "KA4_Core_Lower_1_pull_0_deg",
+   "msg": "33.9 cm^2 (8%) of its concrete face has under 1.0 deg draft",
+   "cm2": 33.9
+  },
+  {
+   "kind": "low_draft",
+   "where": "KA5_Core_Lower_key_3_pull_90_deg",
+   "msg": "177.2 cm^2 (41%) of its concrete face has under 1.0 deg draft",
+   "cm2": 177.2
+  },
+  {
+   "kind": "low_draft",
+   "where": "KA6_Core_Lower_5_pull_180_deg",
+   "msg": "33.2 cm^2 (9%) of its concrete face has under 1.0 deg draft",
+   "cm2": 33.2
+  }
+ ]
+}

@@ -132,3 +132,37 @@ Use one pigment lot for all nine pots, and pre-weigh every dose on a 0.1 g scale
 - `thin_wall` at z −423: the logo and feet relief
 - `low_draft` on KA2/KA5: sliding on the floor with release
 - `interference` CAP with D1 to D4: a press fit, if it's kept as a cover only
+
+## Fixes applied to the STLs (2026-11-17)
+The four fixes above are now in the mold files: `K_mold_print_files_STL_2026-11-17_fixes.zip`. It has 57 files, the 53 mold parts (32 changed) plus 4 hold-down parts. They were made by editing the 2026-10-26 STLs with `fixes/apply_fixes.py`. The Onshape model still needs the same changes.
+
+1. **Pour path:**
+   - The ring over the wall gap is cut off D1 to D4.
+   - Each D piece gets a 6.35 mm riser collar (r 115.5 to 121.85 mm, up to z 495) that carries the funnel.
+2. **Side openings:**
+   - The core skin continues to the flat wall on the 10 core pieces at each opening, following the vessel's inner surface. The surface is measured by `fixes/measure_core.py` and `fixes/measure_shell.py`. The skin doesn't just extrude straight out, because that would thin the wall at the opening edge by up to 12 mm.
+   - The 12 flat-wall shell pieces get an 8.5 mm ledge, so the skin seats on a land. Before, it only had a 1 mm edge to seat on.
+3. **Vents:** the eight core floor vents are plugged.
+4. **Hold-down:**
+   - a 2x6 bridge on the cap
+   - two 3/8-16 rods at x = ±380 mm (34 mm clear of the shell), down to a 3/4 in bench board
+   - the cap is no longer a press fit
+   - a clay bead under the cap
+
+**Re-check** (`k-2026-11-17.moldcheck.json`, at 2.0 and 1.7 mm): there's no `no_pour_path`, leak, flood, air trap or undercut at either resolution.
+
+| | |
+|---|---|
+| Cast below the rim | 18.5 L |
+| Riser | 0.54 L |
+| Finished pot | 38.8 kg |
+| Core uplift | 2,210 N (about 500 lbf) |
+| Sideways push on the core | 1,060 N (about 240 lbf) |
+
+The volume now agrees between the two resolutions, because the seams no longer fill.
+
+What's left is accepted:
+- The core skins touch the ledges (contact).
+- The logo and feet relief shows as thin.
+- Low draft on the base pocket and on the core floor pieces.
+- The bed list.
