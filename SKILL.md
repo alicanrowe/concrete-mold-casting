@@ -10,6 +10,7 @@ metadata:
 Design a mold that fills, vents, holds and comes apart; mix and pour GFRC that comes out the same colour every time; plan the run. Check the mold model before printing or pouring.
 
 ## Before designing
+0. **Do what was asked, no more.** Quote the user's words for the job. "New previews", "match the other renders" or "update the page" means new pictures of the checked mold, with no mold change. Change the mold only where the user's words ask for it, and list what changed.
 1. Read `references/mold-design.md`. For the mix read `references/gfrc-mix.md`; for pour day `references/pour-cure-demold.md`; for more than one unit `references/production-planning.md`.
 2. Start a project page from `references/project-template.md`. Write the piece's mold spec (`<piece>.moldcheck.json`): units, up axis, wall, `min_wall`, `min_draft`, density, `pour` point, `fill_level`, `rim`, printer `bed`, and `groups` (for example the core pieces).
 3. Editing an existing mold: open the file the project page names as current and check its hash. Never work from remembered sizes.
@@ -24,6 +25,7 @@ Design a mold that fills, vents, holds and comes apart; mix and pour GFRC that c
 - Flanges on every seam, bolts every 4–6 in on the lower half, clay or caulk on the outside of each seam.
 - **Core hold-down** that bolts to the base or a bridge. The checker's `group_force_N` z for the core is the uplift; the hold-down must beat it with margin. Weight and friction caps don't count.
 - Every piece fits the printer bed.
+- **Only parts that can be bought or made:** bolts, inserts, wing nuts and hold-down bars at catalogue sizes (name them on the project page); flanges thick enough to take them; nothing floating, nothing that needs a hand inside a closed cavity to tighten.
 
 ## Before saying the mold is done
 1. Export a new numbered version (never overwrite), then run:
@@ -50,7 +52,10 @@ Make them from the checked mold, never by hand. Read `references/animation.md`.
    - Every clip is checked every 2 mm of motion for pieces passing through each other or through the cast.
    - It must exit 0, with 0 collisions in `build`, `pour` and `demold`.
    - `no way out` means the mold can't be demolded in that order, or at all. Fix the mold.
-3. `node scripts/animpreview.js <piece>-mold.glb previews/ --mv model-viewer.min.js` renders an MP4 and a contact sheet per clip. Watch them before handing the GLB to the site. Compress with `npx @gltf-transform/cli meshopt`.
+3. Previews and final renders run on cloud machines, never on the owner's Mac (`animpreview.js` refuses to). `node scripts/animpreview.js <piece>-mold.glb previews/ --mv model-viewer.min.js` renders an MP4 and a contact sheet per clip. Watch them before handing the GLB to the site. Compress with `npx @gltf-transform/cli meshopt`.
 4. Write the demold order from the report onto the project page.
 
 After changing `scripts/moldcheck.py`, run `python3 scripts/tests/make_fixtures.py && python3 scripts/tests/run_tests.py`: every planted mistake must be caught and the good mold must stay clean. After changing `scripts/moldanim.py`, run `python3 scripts/tests/run_anim_tests.py`.
+
+## Keep this skill improving
+When a pour, a demold, a render or the user turns up a problem a rule here would have prevented, write the rule into the matching reference file (mold design, mix, pour day, production, animation) in the same session. If moldcheck or moldanim should have caught it, add a planted case to `scripts/tests/` and run the tests above. Then publish the skill.

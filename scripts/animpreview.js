@@ -9,6 +9,9 @@
 // https://cdn.jsdelivr.net/npm/@google/model-viewer@4.1.0/dist/model-viewer.min.js saved locally.
 const fs = require('fs'), path = require('path'), http = require('http'), { execFileSync } = require('child_process');
 const { chromium } = require('playwright');
+if (process.platform === 'darwin' && !process.env.ALLOW_LOCAL_RENDER) {   // renders run on cloud machines, never the owner's Mac
+  console.error('refusing to render on a Mac: run this on a cloud machine (ALLOW_LOCAL_RENDER=1 only if the owner asked).'); process.exit(3);
+}
 
 const args = process.argv.slice(2);
 const opt = (k, d) => { const i = args.indexOf('--' + k); return i >= 0 ? args[i + 1] : d; };
