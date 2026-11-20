@@ -52,7 +52,7 @@ Make them from the checked mold, never by hand. Read `references/animation.md`.
    - Every clip is checked every 2 mm of motion for pieces passing through each other or through the cast.
    - It must exit 0, with 0 collisions in `build`, `pour` and `demold`.
    - `no way out` means the mold can't be demolded in that order, or at all. Fix the mold.
-3. Previews and final renders run on cloud machines, never on the owner's Mac (`animpreview.js` refuses to). `node scripts/animpreview.js <piece>-mold.glb previews/ --mv model-viewer.min.js` renders an MP4 and a contact sheet per clip. Watch them before handing the GLB to the site. Compress with `npx @gltf-transform/cli meshopt`.
+3. Previews and final renders run on cloud machines, never on the owner's Mac (`animpreview.js` refuses to). Animations and big jobs go to GarageFarm through the `render-farm` skill (github.com/alicanrowe/render-farm), which uploads and submits without anyone clicking renderBeamer. `node scripts/animpreview.js <piece>-mold.glb previews/ --mv model-viewer.min.js` renders an MP4 and a contact sheet per clip. Watch them before handing the GLB to the site. Compress with `npx @gltf-transform/cli meshopt`.
 4. Write the demold order from the report onto the project page.
 
 After changing `scripts/moldcheck.py`, run `python3 scripts/tests/make_fixtures.py && python3 scripts/tests/run_tests.py`: every planted mistake must be caught and the good mold must stay clean. After changing `scripts/moldanim.py`, run `python3 scripts/tests/run_anim_tests.py`.
