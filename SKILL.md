@@ -59,3 +59,5 @@ After changing `scripts/moldcheck.py`, run `python3 scripts/tests/make_fixtures.
 
 ## Keep this skill improving
 When a pour, a demold, a render or the user turns up a problem a rule here would have prevented, write the rule into the matching reference file (mold design, mix, pour day, production, animation) in the same session. If moldcheck or moldanim should have caught it, add a planted case to `scripts/tests/` and run the tests above. Then publish the skill.
+
+**Design taste.** How a page, render or piece looks is judged against the shared `design-taste` skill (`../design-taste/` next to this skill): read its principles and banned moves, and score visual work with its rubric before showing it. When the client critiques how anything looks, log the exact words in its `critique-log.md` in the same session, distil them into its principles or rubric, and publish it with `_publish/sync.sh design-taste`.
