@@ -35,6 +35,7 @@ Design a mold that fills, vents, holds and comes apart; mix and pour GFRC that c
 3. Read the reported numbers: litres per pour, mass, wall p5, push-off force per piece, core uplift. Size bolts and the hold-down to 2× the force.
 4. Diff part volumes and bounds against the previous version: any change that wasn't meant is a stray edit.
 5. Cut a section through the cast (`--cast-stl`) and look at it.
+6. The cast piece stands: `python3 scripts/check_rest.py vessel.stl --feet N` (N = 1 for a flat base) fails a piece that rocks, rolls or tips (`references/physics.md`).
 
 ## Mix, pour and production
 - Turn the checker's litres into a shopping list and bucket weights:
