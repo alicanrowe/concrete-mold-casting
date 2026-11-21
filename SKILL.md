@@ -57,6 +57,16 @@ Make them from the checked mold, never by hand. Read `references/animation.md`.
 
 After changing `scripts/moldcheck.py`, run `python3 scripts/tests/make_fixtures.py && python3 scripts/tests/run_tests.py`: every planted mistake must be caught and the good mold must stay clean. After changing `scripts/moldanim.py`, run `python3 scripts/tests/run_anim_tests.py`.
 
+## Excuses that don't count
+Each of these is a shortcut that ends in a broken result. If you catch yourself thinking the left column, do the right column.
+
+| The excuse | What to do instead |
+|---|---|
+| "The draft looks fine from here" | Run the draft and undercut check on every mold part; eyeballing misses locks. |
+| "The parting line can be sorted at the shop" | Settle it in the model; a mold that can't come apart is a broken mold. |
+| "It's only a render, clipping won't matter" | Run the clipping check on every render and animation frame set. |
+| "While I'm in here I'll also tidy/refactor this other bit" | Change only what the task needs. Smallest diff that works; no new options, helpers or files nobody asked for. Note other ideas for later instead. |
+
 ## Keep this skill improving
 When a pour, a demold, a render or the user turns up a problem a rule here would have prevented, write the rule into the matching reference file (mold design, mix, pour day, production, animation) in the same session. If moldcheck or moldanim should have caught it, add a planted case to `scripts/tests/` and run the tests above. Then publish the skill.
 
