@@ -12,6 +12,8 @@ How to design a mold for a cast concrete (GFRC) piece so it fills, vents, holds 
 | **Positive master → fiberglass (FRP) mold** | Gel coat + chopped mat laid on the master | Large smooth shells, sprayed GFRC face + backer | No undercuts at all. Needs real draft (3°+). |
 | **Inflatable / collapsible core** | Bladder or segmented core inside a rigid shell | Closed vessels with a narrow neck | Bladders float: hold them down and size for hydrostatic pressure. |
 
+**Split the piece, not only the mold.** A big piece (a stool, a bench, a long planter) can be cast as several smaller pieces that bolt together, instead of one casting in one big mold. If the pieces are identical (four quarter-shells of a four-legged stool, each one leg and a quarter of the apron, plus a separate seat bowl), one small mold casts all of them: a quarter of the mold to print, every piece fits the bed, no core, and each casting is open and easy to vibrate. The cost is the joint: give every mating edge a cast-in flange 15–20 mm wide with bolt bosses or cast-in threaded inserts every 100–150 mm, register the pieces with pins, and let the bolts and seams show as part of the design rather than hiding them. Check the joint like a part: `seating-load-check` on the assembled piece, with the bolts, not the concrete, carrying the tension. (Seen in a Plasthetic.s stool form study, Nov 2026: four molded leg-quarters flanged and bolted, seat bowl pinned on top.)
+
 For a vessel with a neck narrower than the belly (a planter, an urn) the **core** is the hard part: it has to come out through the neck. Either segment it (keys first, like a barrel's staves), use a collapsible core, or cast upside down with an open bottom and a separate floor.
 
 ## 2. Wall, floor and rim
