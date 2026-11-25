@@ -525,7 +525,6 @@ def main():
     t += 2.0
     for n in allp:
         tl_d.key(n, t, *tl_d.pose(n, t))
-    demold_T = t
 
     # ---------------- build timeline
     build_stages = spec.get("build") or default_build(parts)
@@ -573,7 +572,6 @@ def main():
     t += 1.5
     for n in allp:
         tl_b.key(n, t, *tl_b.pose(n, t))
-    build_T = t
 
     # ---------------- pour clip on its own
     tl_p = Timeline(allp)
