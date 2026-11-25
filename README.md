@@ -1,3 +1,5 @@
+![Concrete mold casting: Multi-part molds for cast concrete and GFRC, checked before anything is printed or poured.](.github/banner.png)
+
 # Concrete mold casting skill
 
 ![The Project K mold taken apart around a black GFRC planter: 28 shell pieces, a 22-piece core, base, cap and funnel](docs/k-mold-exploded.png)
